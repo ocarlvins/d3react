@@ -1,12 +1,12 @@
 import React from 'react';
 import * as d3 from 'd3';
 
-export const useD3 = (renderChartFn, dependencies) => {
+export const useD3 = (renderChartFn, data) => {
 const ref = React.useRef();
 
     React.useEffect(() => {
-        renderChartFn(d3.select(ref.current));
+        renderChartFn(d3.select(ref.current), data);
         return () => {};
-    }, dependencies);
+    }, [data]);
 return ref;
 }
