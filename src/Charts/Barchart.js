@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-export const Barchart = (svg, data) => {
+export const Barchart = (svg, data, other_variables) => {
     const height = 500;
     const width = 500;
     const margin = {top: 20, right: 30, bottom: 30, left: 40};
